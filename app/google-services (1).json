@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183570838889",
+    "project_id": "shuruat2",
+    "storage_bucket": "shuruat2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183570838889:android:24fc693fad260f856df9f8",
+        "android_client_info": {
+          "package_name": "com.example.shuruat1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183570838889-4ae5r44l1bsmr54655ogajoqjbfbc687.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwvrLreNz87oaEfIr6TOtz7BSMbTn4vi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183570838889-4ae5r44l1bsmr54655ogajoqjbfbc687.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">SHURUAT</string>
+    <string name="SHURUT_APP">SHURUAT</string>
+    <string name="heading">&quot;Creating pathways to academic excellence.&quot;</string>
+    <string name="Login">REGISTERED USER LOGIN</string>
+    <string name="New_Register">NEW USER REGISTRATION</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="Home">HOME</string>
+    <string name="aboiut_us">ABOUT US</string>
+    <string name="CONTACT">CONTACT US</string>
+    <string name="Profile">PROFILE</string>
+    <string name="WELCOME">WELCOME TO</string>
+    <string name="content">Shuruat is a revolutionary mobile app designed to support financially challenged students on their educational journey. Our app is dedicated to collecting important data from students in need of financial aid and connecting them to the appropriate resources and support they require.  Powered by the esteemed Maharaja Agrasen Institute of Technology, Shuruat aims to streamline the process of connecting financially assistance students with potential sources of aid .With Shuruat, you can be part of a transformative movement that reshapes the future of education.</string>
+    <string name="content2">\"Unlocking Education\'s Potential: Shuruat, the app for financially challenged students.</string>
+    <string name="powered">Powered by Maharaja Agrasen Institute of Technology</string>
+    <string name="submit">LOGIN</string>
+    <string name="forget">FORGET PASSWARD?</string>
+    <string name="New_Registration">New Registration</string>
+    <string name="Submit">SUBMIT</string>
+    <string name="finacal">Briefly explain why you require financial assistance</string>
+    <string name="QUATE">\"Education is the most powerful weapon which you can use to change the world.\" -
+
+        Nelson Mandela</string>
+    <string name="contactmait">  Maharaja Agrasen Institute of  Technology</string>
+    <string name="postal">Maharaja Agrasen Institute of Technology  PSP Area, Plot No. 1, Sector-22, Rohini,  Delhi-110086  INDIA.</string>
+    <string name="phone"> PHONE:-</string>
+    <string name="number">91-8448186942</string>
+    <string name="email">  Email address:-</string>
+    <string name="id">mait@mait.ac.in</string>
+    <string name="copy">© 1999 Maharaja Agrasen Institute of Technology, New Delhi. All Rights Reserved.</string>
+    <string name="submit_now">submitnow</string>
+    <string name="About_home">ABOUT US</string>
+    <string name="MISSON">OUR MISSION</string>
+    <string name="VISON">OUR VISION</string>
+    <string name="mission_content">At Shuruat, our mission is to empower financially challenged students by providing them with the necessary tools, resources, and support to overcome financial barriers and pursue their educational dreams. We are dedicated to streamlining the process of connecting students to financial assistance, creating a comprehensive database that enables organizations and institutions to enhance access to education. Through collaboration and advocacy, we aim to create a more equitable educational landscape where every student has the opportunity to thrive. Our mission is to be a catalyst for change, breaking down barriers and transforming lives through the power of education.</string>
+    <string name="vision.">OUR VISION</string>
+    <string name="vision_content">To create a world where financial barriers do not hinder the pursuit of education, where every aspiring student has equal access to opportunities, and where their dreams can flourish and make a positive impact on society. We envision an educational landscape that is inclusive, empowering, and transformative, where financial assistance is seamlessly available, and students are equipped with the resources and support they need to unlock their true potential. Together, we strive to reshape the future of education, making it a beacon of hope and a catalyst for positive change in the world.</string>
+    <string name="login_regis">REGISTERED USER</string>
+    <string name="Extra">TODO</string>
+    <string name="logo">TODO</string>
+
+</resources>
