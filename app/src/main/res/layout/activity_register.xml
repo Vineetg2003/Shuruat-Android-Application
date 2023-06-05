@@ -33,6 +33,7 @@
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:background="@drawable/input_bg"
         android:ems="10"
@@ -47,29 +48,30 @@
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.527" />
 
     <EditText
         android:id="@+id/editTextTextPersonName11"
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_55sdp"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/baseline_security_24"
         android:ems="10"
-        android:hint="DESCRIPTION"
-        android:inputType="textPersonName"
-        android:paddingLeft="@dimen/_20sdp"
+        android:hint="Enter Password"
+        android:inputType="textWebPassword"
+        android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingRight="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.748" />
 
     <EditText
         android:id="@+id/editTextTextPersonName9"
@@ -77,6 +79,7 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/input_bg"
         android:ems="10"
         android:hint="Annual Household Income"
@@ -87,15 +90,17 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.6" />
 
     <EditText
         android:id="@+id/editTextTextPersonName10"
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_school_24"
@@ -108,9 +113,10 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.674" />
 
     <TextView
         android:id="@+id/textView5"
@@ -202,7 +208,7 @@
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_28sdp"
         android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_3sdp"
         android:background="@drawable/input_bg"
@@ -225,9 +231,9 @@
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_28sdp"
         android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
-        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_call_24"
         android:ems="10"
@@ -248,7 +254,7 @@
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_3sdp"
         android:background="@drawable/input_bg"
@@ -261,20 +267,9 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/finacal"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.46" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

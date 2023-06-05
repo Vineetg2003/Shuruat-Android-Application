@@ -1,88 +1,66 @@
 package com.example.shuruat1;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.shuruat1.databinding.ActivityMainBinding;
 import com.example.shuruat1.databinding.ActivityRegisterBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class register extends AppCompatActivity {
-    ActivityRegisterBinding binding;
-    String name,email_id,contact,adhaar,Father_Occupation,Income,Educational_Institue,Description;
-    FirebaseDatabase db;
-    DatabaseReference reference;
-    private Button button;
+    private ActivityRegisterBinding binding;
+    private DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        getSupportActionBar().hide();
 
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = binding.editTextTextPersonName5.getText().toString();
+                String emailId = binding.editTextTextEmailAddress.getText().toString();
+                String contact = binding.editTextPhone.getText().toString();
+                String adhaar = binding.editTextPhone2.getText().toString();
+                String fatherOccupation = binding.editTextTextPersonName8.getText().toString();
+                String income = binding.editTextTextPersonName9.getText().toString();
+                String educationalInstitute = binding.editTextTextPersonName10.getText().toString();
+                String Password = binding.editTextTextPersonName11.getText().toString();
 
+                if (!name.isEmpty() && !emailId.isEmpty() && !contact.isEmpty() && !adhaar.isEmpty() && !fatherOccupation.isEmpty() && !income.isEmpty() && !educationalInstitute.isEmpty() && !Password.isEmpty()) {
+                    User user = new User(name, emailId, contact, adhaar, fatherOccupation, income, educationalInstitute, Password);
+                    reference = FirebaseDatabase.getInstance().getReference().child("User");
+                    reference.push().setValue(user);
 
-                name = binding.editTextTextPersonName5.getText().toString();
-                email_id = binding.editTextTextEmailAddress.getText().toString();
-                contact = binding.editTextPhone.getText().toString();
-                adhaar = binding.editTextPhone2.getText().toString();
-                Father_Occupation = binding.editTextTextPersonName8.getText().toString();
-                Income = binding.editTextTextPersonName9.getText().toString();
-                Educational_Institue = binding.editTextTextPersonName10.getText().toString();
-                Description = binding.editTextTextPersonName11.getText().toString();
-
-                editfeild();
-                DatabaseReference presenceRef = FirebaseDatabase.getInstance().getReference("disconnectmessage");
-                presenceRef.onDisconnect().setValue("I disconnected!");
-
-                if (!name.isEmpty() && !email_id.isEmpty() && !contact.isEmpty() && !adhaar.isEmpty() && !Father_Occupation.isEmpty() && !Income.isEmpty() && !Educational_Institue.isEmpty() && !Description.isEmpty()){
-                    User user = new User(name,email_id,contact,adhaar,Father_Occupation,Income,Educational_Institue,Description);
-                    db = FirebaseDatabase.getInstance();
-                    reference = db.getReference();
-                    reference.child("User").child(name).child(email_id).child(contact).child(adhaar)
-                            .child(Father_Occupation).child(Income).child(Educational_Institue)
-                            .child(Description).setValue(user);
+                    Toast.makeText(register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                    clearFields();
+                } else {
+                    Toast.makeText(register.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
-        TextView btn=findViewById(R.id.login);
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        TextView loginTextView = findViewById(R.id.login);
+        loginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(register.this,Login.class));
-
-            }
-        });
-
-
-
-
-
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                openLogin();
             }
         });
     }
 
-    public void editfeild() {
+    private void clearFields() {
         binding.editTextTextPersonName5.setText("");
         binding.editTextTextEmailAddress.setText("");
         binding.editTextPhone.setText("");
@@ -91,10 +69,5 @@ public class register extends AppCompatActivity {
         binding.editTextTextPersonName9.setText("");
         binding.editTextTextPersonName10.setText("");
         binding.editTextTextPersonName11.setText("");
-
-    }
-    public void openLogin() {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
     }
 }

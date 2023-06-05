@@ -2,12 +2,12 @@ package com.example.shuruat1;
 
 public class User {
 
-    String name,email_id,contact,adhaar,Father_Occupation,Income,Educational_Institue,Description;
+    String name,email_id,contact,adhaar,Father_Occupation,Income,Educational_Institue,password;
 
     public User() {
     }
 
-    public User(String name, String email_id, String contact, String adhaar, String father_Occupation, String income, String educational_Institue, String description) {
+    public User(String name, String email_id, String contact, String adhaar, String father_Occupation, String income, String educational_Institue, String Password) {
         this.name = name;
         this.email_id = email_id;
         this.contact = contact;
@@ -15,7 +15,7 @@ public class User {
         Father_Occupation = father_Occupation;
         Income = income;
         Educational_Institue = educational_Institue;
-        Description = description;
+        password = Password;
     }
 
     public String getName() {
@@ -74,11 +74,11 @@ public class User {
         Educational_Institue = educational_Institue;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getPassword() {
+        return password;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setPassword(String Password) {
+        password = Password;
     }
 }
