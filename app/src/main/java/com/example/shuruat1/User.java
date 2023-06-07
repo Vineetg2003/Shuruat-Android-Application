@@ -2,18 +2,18 @@ package com.example.shuruat1;
 
 public class User {
 
-    String name,email_id,contact,adhaar,Father_Occupation,Income,Educational_Institue,password;
+    String name,email_id,contact,adhaar,Educational_Institue,password;
 
     public User() {
     }
 
-    public User(String name, String email_id, String contact, String adhaar, String father_Occupation, String income, String educational_Institue, String Password) {
+    public User(String name, String email_id, String contact, String adhaar,String educational_Institue, String Password) {
         this.name = name;
         this.email_id = email_id;
         this.contact = contact;
         this.adhaar = adhaar;
-        Father_Occupation = father_Occupation;
-        Income = income;
+
+
         Educational_Institue = educational_Institue;
         password = Password;
     }
@@ -50,21 +50,9 @@ public class User {
         this.adhaar = adhaar;
     }
 
-    public String getFather_Occupation() {
-        return Father_Occupation;
-    }
 
-    public void setFather_Occupation(String father_Occupation) {
-        Father_Occupation = father_Occupation;
-    }
 
-    public String getIncome() {
-        return Income;
-    }
 
-    public void setIncome(String income) {
-        Income = income;
-    }
 
     public String getEducational_Institue() {
         return Educational_Institue;

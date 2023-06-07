@@ -39,4 +39,13 @@ public class about extends AppCompatActivity {
         Intent intent = new Intent(this, contact.class);
         startActivity(intent);
     }
+    int counter =0;
+    @Override
+    public void onBackPressed() {
+
+
+        counter++;
+        if(counter==2)
+            super.onBackPressed();
+    }
 }

@@ -47,5 +47,6 @@
     <string name="login_regis">REGISTERED USER</string>
     <string name="Extra">TODO</string>
     <string name="logo">TODO</string>
+    <string name="image_string">image_string</string>
 
 </resources>

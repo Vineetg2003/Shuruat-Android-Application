@@ -17,4 +17,13 @@ public class Mission extends AppCompatActivity {
         setContentView(R.layout.activity_mission);
 
     }
+    int counter =0;
+    @Override
+    public void onBackPressed() {
+
+
+        counter++;
+        if(counter==2)
+            super.onBackPressed();
+    }
 }

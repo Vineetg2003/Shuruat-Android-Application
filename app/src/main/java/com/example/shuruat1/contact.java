@@ -16,6 +16,13 @@ public class contact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_contact);
+
+
+
+
+
+
+
         button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,4 +50,13 @@ public class contact extends AppCompatActivity {
         startActivity(intent);
     }
 
+int counter =0;
+    @Override
+    public void onBackPressed() {
+
+
+counter++;
+if(counter==2)
+        super.onBackPressed();
+    }
 }

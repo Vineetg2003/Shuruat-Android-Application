@@ -9,51 +9,36 @@
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_28sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_person_24"
         android:ems="10"
-        android:hint="  Enter Your Name"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="Enter Your Name"
+
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingRight="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintVertical_bias="0.328" />
+
+
+
+
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/password"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_25sdp"
-        android:background="@drawable/input_bg"
-        android:ems="10"
-        android:hint="  FATHER OCCUPATION"
-        android:inputType="textPersonName"
-        android:paddingLeft="@dimen/_10sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingRight="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName11"
-        android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:autoSizeTextType="uniform"
@@ -61,51 +46,34 @@
         android:drawableLeft="@drawable/baseline_security_24"
         android:ems="10"
         android:hint="Enter Password"
-        android:inputType="textWebPassword"
+        android:drawablePadding="@dimen/_10sdp"
+        android:inputType="textPassword"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingRight="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.748" />
+        app:layout_constraintVertical_bias="0.77"/>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName9"
-        android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginEnd="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/input_bg"
-        android:ems="10"
-        android:hint="Annual Household Income"
-        android:inputType="textPersonName"
-        android:paddingLeft="@dimen/_20sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingRight="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
 
     <EditText
         android:id="@+id/editTextTextPersonName10"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_school_24"
         android:ems="10"
-        android:hint="   Name of Educational Institution"
+        android:hint="Currently Studying"
+        android:drawablePadding="@dimen/_10sdp"
+
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
@@ -113,7 +81,7 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.674" />
@@ -138,10 +106,12 @@
         android:layout_marginEnd="@dimen/_30sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021"
+        app:layout_constraintVertical_bias="0.048"
         app:srcCompat="@drawable/regi" />
+
 
     <TextView
         android:id="@+id/textView3"
@@ -157,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <Button
         android:id="@+id/button"
@@ -171,7 +141,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.76" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -206,15 +177,17 @@
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_28sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
+        android:drawablePadding="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_3sdp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_email_24"
+
         android:ems="10"
-        android:hint="  EMAIL ID"
+        android:hint="EMAIL ID"
         android:inputType="textEmailAddress"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
@@ -222,14 +195,16 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331" />
+        app:layout_constraintVertical_bias="0.408" />
+
 
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_28sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_25sdp"
@@ -237,7 +212,8 @@
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_call_24"
         android:ems="10"
-        android:hint="  Contact Number"
+        android:hint="Contact Number"
+        android:drawablePadding="@dimen/_10sdp"
         android:inputType="phone"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
@@ -245,31 +221,37 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.494" />
+
 
     <EditText
-        android:id="@+id/editTextPhone2"
+        android:id="@+id/aadhar"
         android:layout_width="@dimen/_240sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginStart="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_3sdp"
         android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/aadhara"
+        android:drawablePadding="@dimen/_10sdp"
         android:ems="10"
-        android:hint="ADHAAR NUMBER"
+
+        android:hint="Adhaar Number"
         android:inputType="phone"
-        android:paddingLeft="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingRight="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.589" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
