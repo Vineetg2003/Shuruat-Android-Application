@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class homepage extends AppCompatActivity {
+    public FloatingActionButton floatingActionButton;
+
 public void gallery(View view){
     Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
 }
@@ -23,6 +26,25 @@ public void gallery(View view){
         getSupportActionBar().hide();
 
         setContentView(R.layout.activity_homepage);
+        floatingActionButton = findViewById(R.id.application);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(homepage.this,Form.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(item -> {

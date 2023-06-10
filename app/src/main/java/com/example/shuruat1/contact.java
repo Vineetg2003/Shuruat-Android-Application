@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class contact extends AppCompatActivity {
-    public void gallery(View view){
+    public void gallery1(View view){
         Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
     }
 

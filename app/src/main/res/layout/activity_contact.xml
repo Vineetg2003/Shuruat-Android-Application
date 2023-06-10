@@ -34,20 +34,20 @@
         app:fab_addButtonPlusIconColor="@color/black"
         app:layout_anchor="@id/bottomAppBar"
         app:layout_anchorGravity="center_horizontal">
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_title="Gallery"
-            app:fab_icon="@drawable/apply"
-            app:fabCustomSize="@dimen/_100sdp"
-            app:fab_colorNormal="@color/white"
-            app:fab_colorPressed="@color/white"
-            app:fab_size="normal"
-            android:id="@+id/application"/>
+<!--        <com.getbase.floatingactionbutton.FloatingActionButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:fab_title="Gallery"-->
+<!--            app:fab_icon="@drawable/apply"-->
+<!--            app:fabCustomSize="@dimen/_100sdp"-->
+<!--            app:fab_colorNormal="@color/white"-->
+<!--            app:fab_colorPressed="@color/white"-->
+<!--            app:fab_size="normal"-->
+<!--            android:id="@+id/application"/>-->
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/gallery"
-            android:onClick="gallery"
+            android:onClick="gallery1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorNormal="@color/white"
