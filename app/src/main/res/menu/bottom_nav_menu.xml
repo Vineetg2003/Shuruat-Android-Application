@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+<item
+    android:id="@+id/home"
+    android:icon="@drawable/home_bottom"
+    android:title="Home"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/person_bottom"
+        android:title="Profile"/>
+
+
+    <item
+        android:id="@+id/placeholder"
+        android:title=""/>
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about2"
+        android:title="About Us"/>
+    <item
+        android:id="@+id/Contact"
+        android:icon="@drawable/contact_bottom"
+        android:title="Contact Us"/>
+
+
+"
+</menu>

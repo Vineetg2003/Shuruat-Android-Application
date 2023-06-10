@@ -23,7 +23,7 @@ public class Mission extends AppCompatActivity {
 
 
         counter++;
-        if(counter==2)
+        if(counter==1)
             super.onBackPressed();
     }
 }

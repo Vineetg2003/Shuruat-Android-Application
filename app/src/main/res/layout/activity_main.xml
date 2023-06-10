@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A322CAFF"
+    android:background="@drawable/maldives"
     android:foregroundTint="#3949AB"
     tools:context=".MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -25,11 +26,12 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="119dp"
+        android:layout_height="33dp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:backgroundTint="@color/black"
+        android:fontFamily="serif-monospace"
         android:shadowColor="#881818"
         android:text="@string/SHURUT_APP"
         android:textSize="@dimen/_20ssp"
@@ -62,9 +64,9 @@
         android:id="@+id/button4"
         android:layout_width="@dimen/_180sdp"
         android:layout_height="69dp"
+        android:background="@drawable/round_btn"
         android:text="@string/New_Register"
         android:textSize="@dimen/_15ssp"
-        android:background="@drawable/round_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +78,7 @@
         android:id="@+id/textView3"
         android:layout_width="@dimen/_240sdp"
         android:layout_height="@dimen/_90sdp"
+        android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:text="@string/content2"
         android:textColor="#0A1B88"
@@ -103,6 +106,7 @@
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_55sdp"
         android:text="@string/About_home"
+
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"

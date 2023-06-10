@@ -8,30 +8,43 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class homepage extends AppCompatActivity {
-    private Button button;
+public void gallery(View view){
+    Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_homepage);
-        button = (Button) findViewById(R.id.button6);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openabout();
-            }
-        });
-        button = (Button) findViewById(R.id.button7);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                opencontact();
+        setContentView(R.layout.activity_homepage);
+        BottomNavigationView bottomNavigationView =findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.home:
+                return true;
+//                case R.id.profile:
+//
+//                    return true;
+                case R.id.about:
+                    startActivity(new Intent(getApplicationContext(),about.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+//                    finish();
+                    return true;
+                case R.id.Contact:
+                    startActivity(new Intent(getApplicationContext(),contact.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+                    return true;
             }
+            return false;
         });
+
     }
 
 
@@ -68,12 +81,5 @@ public class homepage extends AppCompatActivity {
 
 
 
-    public void openabout() {
-        Intent intent = new Intent(this, about.class);
-        startActivity(intent);
-    }
-    public void opencontact() {
-        Intent intent = new Intent(this, contact.class);
-        startActivity(intent);
-    }
+
 }

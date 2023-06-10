@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A322CAFF"
+    android:background="#C9E3CECE"
     android:foregroundGravity="center"
     tools:context=".Mission">
 
@@ -18,83 +18,72 @@
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar3"
-                android:layout_width="409dp"
-                android:layout_height="39dp"
-                android:background="#5E16326A"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_117sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="casual"
+                android:text="@string/SHURUT_APP"
+                android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.484"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintVertical_bias="0.0" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginTop="-1dp"
-                    android:gravity="center"
-                    android:text="@string/SHURUT_APP"
-                    android:textSize="29sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.484"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-            </androidx.appcompat.widget.Toolbar>
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="134dp"
-                android:layout_height="129dp"
-                android:layout_marginLeft="@dimen/_100sdp"
-                android:layout_marginTop="30dp"
-                android:background="#2C039BE5"
+                android:layout_width="179dp"
+                android:layout_height="167dp"
+                android:layout_marginLeft="@dimen/_85sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+
                 app:layout_constraintBottom_toTopOf="@+id/button20"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar3"
                 app:layout_constraintVertical_bias="0.051"
-                app:srcCompat="@drawable/mission" />
-
+                app:srcCompat="@drawable/mission_" />
 
             <TextView
-                android:id="@+id/textView23"
-                android:layout_width="349dp"
-                android:layout_height="630dp"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="0dp"
-                android:fontFamily="serif"
+                android:id="@+id/textView6"
+                android:layout_width="347dp"
+                android:layout_height="591dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:gravity="center"
                 android:text="@string/mission_content"
-                android:textSize="@dimen/_16ssp"
-                app:layout_constraintBottom_toTopOf="@+id/button20"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintHorizontal_bias="0.51"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-                app:layout_constraintVertical_bias="0.943" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.643" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginLeft="20dp"
-                android:gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="sans-serif-light"
                 android:text="@string/powered"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.98" />

@@ -3,10 +3,14 @@ package com.example.shuruat1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,75 +22,79 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
-
 public class Login extends AppCompatActivity {
-    EditText loginUsername , loginPassword;
+    EditText loginUsername, loginPassword;
     Button loginButton;
-    public void login(View view){
-        Toast.makeText(this, "LOGIN SUCCESSFULLY", Toast.LENGTH_SHORT).show();
-    }
-    private Button button;
+    CheckBox passwordVisibilityCheckbox;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
 
-        loginUsername=findViewById(R.id.editTextTextPersonName);
+        loginUsername = findViewById(R.id.editTextTextPersonName);
         loginPassword = findViewById(R.id.editTextTextPassword2);
-        loginButton=findViewById(R.id.button);
+        loginButton = findViewById(R.id.button);
+        passwordVisibilityCheckbox = findViewById(R.id.eye2);
 
-loginButton.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        if (!validUsername() | !validPassword()){
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (validUsername() && validPassword()) {
+                    checkUser();
+                }
+            }
+        });
 
-        }else {
-            checkUser();
-        }
-    }
-});
+        passwordVisibilityCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    // Show password
+                    loginPassword.setTransformationMethod(null);
+                } else {
+                    // Hide password
+                    loginPassword.setTransformationMethod(new PasswordTransformationMethod());
+                }
+            }
+        });
 
-
-
-
-
-
-
-
-        TextView btn=findViewById(R.id.sign_up);
+        TextView btn = findViewById(R.id.sign_up);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Login.this,register.class));
-
+                startActivity(new Intent(Login.this, register.class));
             }
         });
     }
 
-public  Boolean validUsername(){
-        String val = loginUsername.getText().toString();
-        if(val.isEmpty()){
+    public Boolean validUsername() {
+        String val = loginUsername.getText().toString().trim();
+        if (val.isEmpty()) {
             loginUsername.setError("Username cannot be empty");
             return false;
-        }else {
+        } else {
             loginUsername.setError(null);
             return true;
         }
-}
+    }
 
-
-    public  Boolean validPassword(){
-        String val = loginPassword.getText().toString();
-        if(val.isEmpty()){
+    public Boolean validPassword() {
+        String val = loginPassword.getText().toString().trim();
+        if (val.isEmpty()) {
             loginPassword.setError("Password cannot be empty");
             return false;
-        }else {
+        } else if (val.length() < 6) {
+            loginPassword.setError("Password must be at least 6 characters");
+            return false;
+        } else {
             loginPassword.setError(null);
             return true;
         }
     }
+
     public void checkUser() {
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();

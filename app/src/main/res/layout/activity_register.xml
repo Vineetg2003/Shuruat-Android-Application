@@ -4,7 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A322CAFF">
+    android:background="@drawable/bg_2">
+
+
+    <TextView
+        android:id="@+id/shuruat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_117sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="casual"
+        android:text="@string/SHURUT_APP"
+        android:textColor="#D5000000"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
@@ -32,9 +50,6 @@
         app:layout_constraintVertical_bias="0.328" />
 
 
-
-
-
     <EditText
         android:id="@+id/password"
         android:layout_width="@dimen/_240sdp"
@@ -44,9 +59,9 @@
         android:autoSizeTextType="uniform"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_security_24"
+        android:drawablePadding="@dimen/_10sdp"
         android:ems="10"
         android:hint="Enter Password"
-        android:drawablePadding="@dimen/_10sdp"
         android:inputType="textPassword"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_5sdp"
@@ -54,11 +69,10 @@
         android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77"/>
-
+        app:layout_constraintVertical_bias="0.761" />
 
     <EditText
         android:id="@+id/editTextTextPersonName10"
@@ -98,20 +112,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992" />
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="@dimen/_90sdp"
-        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_17sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.079"
         app:srcCompat="@drawable/regi" />
-
 
     <TextView
         android:id="@+id/textView3"
@@ -252,6 +266,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.589" />
+
+    <CheckBox
+        android:id="@+id/eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

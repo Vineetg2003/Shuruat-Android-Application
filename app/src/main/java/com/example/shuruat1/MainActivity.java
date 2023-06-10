@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                openabout();
+                openabout1();
             }
         });
         button = (Button) findViewById(R.id.button17);
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-    public void openabout() {
-        Intent intent = new Intent(this, about.class);
+    public void openabout1() {
+        Intent intent = new Intent(this, about1.class);
         startActivity(intent);
     }
     public void openMission() {

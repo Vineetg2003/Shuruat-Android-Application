@@ -2,50 +2,49 @@ package com.example.shuruat1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class about extends AppCompatActivity {
+    public void gallery(View view){
+        Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
+    }
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_about);
-        button = (Button) findViewById(R.id.button12);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) BottomNavigationView bottomNavigationView =findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.about);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.home:
+                    startActivity(new Intent(getApplicationContext(),homepage.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+                    return true;
+//                case R.id.profile:
+//
+//                    return true;
+                case R.id.about:
 
-                openhomepage();
+//                    finish();
+                    return true;
+                case R.id.Contact:
+                    startActivity(new Intent(getApplicationContext(),contact.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+//                    finish();
+                    return true;
             }
+            return false;
         });
-        button = (Button) findViewById(R.id.button9);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                opencontact();
-            }
-        });
     }
-    public void openhomepage() {
-        Intent intent = new Intent(this, homepage.class);
-        startActivity(intent);
-    }
-    public void opencontact() {
-        Intent intent = new Intent(this, contact.class);
-        startActivity(intent);
-    }
-    int counter =0;
-    @Override
-    public void onBackPressed() {
 
-
-        counter++;
-        if(counter==2)
-            super.onBackPressed();
-    }
 }

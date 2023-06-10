@@ -2,11 +2,16 @@ package com.example.shuruat1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class register extends AppCompatActivity {
     private DatabaseReference reference;
+    private boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +51,18 @@ public class register extends AppCompatActivity {
                 if (!name.isEmpty() && !emailId.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailId).matches()
                         && !contact.isEmpty() && !adhaar.isEmpty() && !educationalInstitute.isEmpty() && !password.isEmpty()) {
 
-                    User user = new User(name, emailId, contact, adhaar, educationalInstitute, password);
-                    reference = FirebaseDatabase.getInstance().getReference().child("Registration");
-                    reference.push().setValue(user);
+                    if (password.length() >= 6) {
+                        User user = new User(name, emailId, contact, adhaar, educationalInstitute, password);
+                        reference = FirebaseDatabase.getInstance().getReference().child("Registration");
+                        reference.push().setValue(user);
 
-                    Toast.makeText(register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                    clearFields();
-                    Intent intent = new Intent(register.this, Login.class);
-                    startActivity(intent);
+                        Toast.makeText(register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                        clearFields();
+                        Intent intent = new Intent(register.this, Login.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(register.this, "Password should be at least 6 characters long", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     Toast.makeText(register.this, "Please fill all the fields correctly", Toast.LENGTH_SHORT).show();
                 }
@@ -64,6 +74,20 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(register.this, Login.class));
+            }
+        });
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) CheckBox passwordVisibilityCheckbox = findViewById(R.id.eye);
+        passwordVisibilityCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                isPasswordVisible = isChecked;
+                if (isChecked) {
+                    passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+                passwordEditText.setSelection(passwordEditText.getText().length());
             }
         });
     }

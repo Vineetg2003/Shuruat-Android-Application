@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SHURUAT</string>
+    <string name="app_name">Shuruat</string>
     <string name="SHURUT_APP">SHURUAT</string>
     <string name="heading">&quot;Creating pathways to academic excellence.&quot;</string>
     <string name="Login">REGISTERED USER LOGIN</string>
@@ -48,5 +48,6 @@
     <string name="Extra">TODO</string>
     <string name="logo">TODO</string>
     <string name="image_string">image_string</string>
+    <string name="gallery">Gallery</string>
 
 </resources>
