@@ -1,7 +1,5 @@
 package com.example.shuruat1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class about extends AppCompatActivity {
-    public void gallery(View view){
+    public void gallery22(View view){
         Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
     }
     private Button button;
@@ -29,9 +29,10 @@ public class about extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(),homepage.class));
                     overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
                     return true;
-//                case R.id.profile:
-//
-//                    return true;
+                case R.id.profile:
+                    startActivity(new Intent(getApplicationContext(),profile.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+                    return true;
                 case R.id.about:
 
 //                    finish();

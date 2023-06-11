@@ -60,9 +60,6 @@
             app:fab_title="@string/gallery"
             />
 
-
-
-
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     <ImageView

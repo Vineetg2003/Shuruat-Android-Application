@@ -51,9 +51,10 @@ public void gallery(View view){
             switch (item.getItemId()){
                 case R.id.home:
                 return true;
-//                case R.id.profile:
-//
-//                    return true;
+                case R.id.profile:
+                    startActivity(new Intent(getApplicationContext(),profile.class));
+                    overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);
+                    return true;
                 case R.id.about:
                     startActivity(new Intent(getApplicationContext(),about.class));
                     overridePendingTransition(R.anim.slide_in_right , R.anim.slide_out_left);

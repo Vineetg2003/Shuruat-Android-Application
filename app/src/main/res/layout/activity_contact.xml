@@ -47,7 +47,7 @@
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/gallery"
-            android:onClick="gallery1"
+            android:onClick="gallery122"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorNormal="@color/white"
@@ -56,10 +56,6 @@
             app:fab_size="normal"
             app:fab_title="@string/gallery"
             />
-
-
-
-
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     <ScrollView
