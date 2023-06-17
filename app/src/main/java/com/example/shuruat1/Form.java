@@ -14,8 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -42,15 +40,11 @@ public class Form extends AppCompatActivity {
     EditText etDate;
     DatePickerDialog.OnDateSetListener setListener;
 
-    private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
         getSupportActionBar().hide();
-
-        mAuth = FirebaseAuth.getInstance();
 
         nameEditText = findViewById(R.id.editTextTextPersonName5);
         dobEditText = findViewById(R.id.date);
@@ -88,7 +82,8 @@ public class Form extends AppCompatActivity {
                 String father_occ = fatherEditText.getText().toString();
                 String mother_occ = motherEditText.getText().toString();
                 String scholor = ScholarEditText.getText().toString();
-                String assiatnace = FinancialEditText.getText().toString();
+                String assistance = FinancialEditText.getText().toString();
+
                 if (name.isEmpty()) {
                     Toast.makeText(Form.this, "Please enter your name", Toast.LENGTH_SHORT).show();
                     return;
@@ -105,13 +100,17 @@ public class Form extends AppCompatActivity {
                     Toast.makeText(Form.this, "Please enter your Aadhaar number", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (aadhaar.length() != 12) {
+                    Toast.makeText(Form.this, "Enter valid Aadhaar Number", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (father.isEmpty()) {
-                    Toast.makeText(Form.this, "Please enter your Father Name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Form.this, "Please enter your Father's Name", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (education.isEmpty()) {
-                    Toast.makeText(Form.this, "Please enter your Educational institute", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Form.this, "Please enter your Educational institution", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (Roll.isEmpty()) {
@@ -122,9 +121,6 @@ public class Form extends AppCompatActivity {
                     Toast.makeText(Form.this, "Please enter your Family Income", Toast.LENGTH_SHORT).show();
                     return;
                 }
-//if (name.isEmpty() && dob.isEmpty() && gender.isEmpty() && aadhaar.isEmpty() && father.isEmpty() && education.isEmpty() && Roll.isEmpty() && income.isEmpty()){
-//    Toast.makeText(Form.this, "Please fill all the fields correctly", Toast.LENGTH_SHORT).show();
-//}
 
                 if (isEmailValid(email) && isContactValid(contact)) {
                     HashMap<String, Object> data = new HashMap<>();
@@ -137,31 +133,16 @@ public class Form extends AppCompatActivity {
                     data.put("Aadhaar", aadhaar);
                     data.put("Father Name", father);
                     data.put("Educational Institution", education);
-                    data.put("Enrolment Number", Roll);
+                    data.put("Enrollment Number", Roll);
                     data.put("Year of Study", year);
                     data.put("Family Income", income);
                     data.put("Expenses", expenses);
                     data.put("Father Occupation", father_occ);
                     data.put("Mother Occupation", mother_occ);
                     data.put("Any availed scholarship", scholor);
-                    data.put("Need of Scholarship", assiatnace);
+                    data.put("Need of Scholarship", assistance);
 
-                    mAuth.createUserWithEmailAndPassword(email, "password")
-                            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                                @Override
-                                public void onSuccess(AuthResult authResult) {
-                                    // Send email verification
-                                    sendEmailVerification();
-                                    // Save user data in Firestore
-                                    saveUserData(data);
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(Form.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                    saveUserData(data);
                 } else {
                     Toast.makeText(Form.this, "Invalid email address or contact number", Toast.LENGTH_SHORT).show();
                 }
@@ -200,30 +181,13 @@ public class Form extends AppCompatActivity {
         return contact.matches(contactPattern);
     }
 
-    private void sendEmailVerification() {
-        mAuth.getCurrentUser().sendEmailVerification()
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(Form.this, "Verification email sent", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Form.this, "Failed to send verification email: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-
     private void saveUserData(HashMap<String, Object> data) {
         FirebaseFirestore.getInstance().collection("User")
                 .add(data) // Generates a unique document ID for each user
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(Form.this, "Form Submit Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Form.this, "Form submitted successfully", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Form.this, homepage.class);
                         startActivity(intent);
                     }
@@ -234,5 +198,15 @@ public class Form extends AppCompatActivity {
                         Toast.makeText(Form.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+
+    }
+
+    int counter = 0;
+
+    @Override
+    public void onBackPressed() {
+        counter++;
+        if (counter == 2)
+            super.onBackPressed();
     }
 }

@@ -75,7 +75,7 @@
         android:contentDescription="@string/image_string"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.021"
-        app:srcCompat="@drawable/home_logo" />
+        app:srcCompat="@drawable/inginte1" />
 
     <TextView
         android:id="@+id/textView"
@@ -115,11 +115,11 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="318dp"
-        android:layout_height="252dp"
+        android:layout_width="315dp"
+        android:layout_height="294dp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:fontFamily="sans-serif-condensed-light"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:shadowColor="#573434"
         android:text="@string/QUATE"

@@ -12,11 +12,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class contact extends AppCompatActivity {
+
     public void gallery122(View view){
         Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
     }
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,6 @@ public class contact extends AppCompatActivity {
 //                    finish();
                     return true;
                 case R.id.Contact:
-
                     return true;
             }
             return false;

@@ -4,7 +4,7 @@ public class User {
 
     String name,email_id,contact,adhaar,Educational_Institue,password;
 
-    public User() {
+    public User(String name, String email, String contact, String adhaar, String educationalInstitute) {
     }
 
     public User(String name, String email_id, String contact, String adhaar,String educational_Institue, String Password) {

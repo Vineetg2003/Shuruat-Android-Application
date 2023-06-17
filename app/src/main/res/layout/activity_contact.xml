@@ -43,7 +43,8 @@
 <!--            app:fab_colorNormal="@color/white"-->
 <!--            app:fab_colorPressed="@color/white"-->
 <!--            app:fab_size="normal"-->
-<!--            android:id="@+id/application"/>-->
+
+<!--            android:id="@+id/application1"/>-->
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/gallery"

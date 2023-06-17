@@ -1,8 +1,5 @@
 package com.example.shuruat1;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,17 +12,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
     EditText loginUsername, loginPassword;
     Button loginButton;
     CheckBox passwordVisibilityCheckbox;
+    private FirebaseAuth mAuth;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,11 +39,13 @@ public class Login extends AppCompatActivity {
         loginButton = findViewById(R.id.button);
         passwordVisibilityCheckbox = findViewById(R.id.eye2);
 
+        mAuth = FirebaseAuth.getInstance();
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validUsername() && validPassword()) {
-                    checkUser();
+                    loginUser();
                 }
             }
         });
@@ -95,39 +97,33 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    public void checkUser() {
+    public void loginUser() {
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Registration");
-        Query checkUserDatabase = reference.orderByChild("email_id").equalTo(userUsername);
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    for (DataSnapshot userSnapshot : snapshot.getChildren()) {
-                        User user = userSnapshot.getValue(User.class);
-                        if (user != null) {
-                            String passwordFromDB = user.getPassword();
-                            if (passwordFromDB.equals(userPassword)) {
-                                loginUsername.setError(null);
-                                Intent intent = new Intent(Login.this, homepage.class);
-                                startActivity(intent);
-                                return;
+
+        mAuth.signInWithEmailAndPassword(userUsername, userPassword)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            if (user != null) {
+                                if (user.isEmailVerified()) {
+                                    // User is logged in and email is verified
+                                    loginUsername.setError(null);
+                                    Intent intent = new Intent(Login.this, homepage.class);
+                                    startActivity(intent);
+                                } else {
+                                    // User email is not verified
+                                    Toast.makeText(Login.this, "Please verify your email to login.", Toast.LENGTH_SHORT).show();
+                                }
                             }
+                        } else {
+                            // Login failed
+                            loginPassword.setError("Invalid Credentials");
+                            loginPassword.requestFocus();
                         }
                     }
-                    loginPassword.setError("Invalid Credentials");
-                    loginPassword.requestFocus();
-                } else {
-                    loginUsername.setError("User does not exist");
-                    loginUsername.requestFocus();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                // Handle onCancelled event
-            }
-        });
+                });
     }
 }

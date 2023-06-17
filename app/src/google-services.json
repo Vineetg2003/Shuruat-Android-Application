@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1044956824979",
+    "firebase_url": "https://shuruat-b607a-default-rtdb.firebaseio.com",
+    "project_id": "shuruat-b607a",
+    "storage_bucket": "shuruat-b607a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044956824979:android:0bf6ad2db49c9136ec1466",
+        "android_client_info": {
+          "package_name": "com.example.shuruat1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044956824979-06n5rfdp3pjunatumuliqndm74t0taar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shuruat1",
+            "certificate_hash": "e59b807100cbd469267c123021ac6a52127974bd"
+          }
+        },
+        {
+          "client_id": "1044956824979-2df7nlg6om594sat8he4qh08fb92jfn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvX055dzfusNEl191nTpxMMuoszwYO7z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044956824979-2df7nlg6om594sat8he4qh08fb92jfn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

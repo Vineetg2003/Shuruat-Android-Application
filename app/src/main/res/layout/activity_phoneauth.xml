@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".phoneauth"
+    android:background="@drawable/phone"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/SHURUT_APP"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+       android:layout_marginLeft="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088"
+        app:srcCompat="@drawable/logo_otp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/otp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edtPhoneNumberAuth"
+        android:layout_width="312dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/input_bg2"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:ems="10"
+        android:hint="Contact Number"
+        android:drawableLeft="@drawable/baseline_call_24" />
+
+    <Button
+        android:id="@+id/btnGetOTP"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/round_btn1"
+        android:text="Get Otp" />
+    <TextView
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="center"
+        android:text="@string/otp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <EditText
+        android:id="@+id/edtOTPAuth"
+        android:layout_width="312dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="@dimen/_30sdp"
+android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:background="@drawable/input_bg2"
+        android:drawablePadding="@dimen/_10sdp"
+        android:paddingStart="@dimen/_35sdp"
+        android:ems="10"
+        android:hint="Enter OTP"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp" />
+
+    <Button
+        android:id="@+id/btnLoginPhoneAuth"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/round_btn1"
+        android:text="VERIFY" />
+
+    <TextView
+        android:id="@+id/mait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/appl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

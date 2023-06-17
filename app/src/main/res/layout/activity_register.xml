@@ -85,7 +85,7 @@
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/baseline_school_24"
         android:ems="10"
-        android:hint="Currently Studying"
+        android:hint="Name of Educational Institute"
         android:drawablePadding="@dimen/_10sdp"
 
         android:inputType="textPersonName"

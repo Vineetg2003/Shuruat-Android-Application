@@ -102,9 +102,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="sans-serif-light"
-            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_95sdp"
             app:layout_constraintVertical_bias="0.98" />
 
     </LinearLayout>

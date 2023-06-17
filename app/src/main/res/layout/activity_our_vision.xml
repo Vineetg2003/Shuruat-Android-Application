@@ -58,12 +58,12 @@
 
         <TextView
             android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="543dp"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="318dp"
+            android:layout_height="463dp"
+            android:layout_marginLeft="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:layout_marginRight="@dimen/_10sdp"
             android:gravity="center"
-android:layout_marginTop="@dimen/_1sdp"
             android:text="@string/vision_content"
             android:textSize="@dimen/_16ssp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,12 +80,13 @@ android:layout_marginTop="@dimen/_1sdp"
             android:text="@string/powered"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_95sdp"
             android:fontFamily="sans-serif-light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="@dimen/_10sdp"
+
             app:layout_constraintVertical_bias="0.98" />
 
     </LinearLayout>

@@ -9,18 +9,29 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class about extends AppCompatActivity {
+    public FloatingActionButton floatingActionButton;
     public void gallery22(View view){
         Toast.makeText(this, "Updated soon", Toast.LENGTH_SHORT).show();
     }
     private Button button;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_about);
+        floatingActionButton = findViewById(R.id.application);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(about.this,phoneauth.class);
+                startActivity(intent);
+            }
+        });
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) BottomNavigationView bottomNavigationView =findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.about);
         bottomNavigationView.setOnItemSelectedListener(item -> {

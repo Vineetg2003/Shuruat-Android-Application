@@ -407,7 +407,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.992"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_marginLeft="@dimen/_95sdp"
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
 
