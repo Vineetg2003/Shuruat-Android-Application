@@ -58,14 +58,15 @@
 
         <TextView
             android:id="@+id/textView27"
-            android:layout_width="318dp"
-            android:layout_height="463dp"
+            android:layout_width="317dp"
+            android:layout_height="487dp"
             android:layout_marginLeft="@dimen/_28sdp"
             android:layout_marginTop="@dimen/_1sdp"
             android:layout_marginRight="@dimen/_10sdp"
             android:gravity="center"
             android:text="@string/vision_content"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="@dimen/_18ssp"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"

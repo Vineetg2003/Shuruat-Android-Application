@@ -57,5 +57,8 @@
     <string name="otp">We will send you an One Time Password on this mobile number</string>
     <string name="otp_1">Enter The OTP sent to Entered Number</string>
     <string name="appl">Continued to Application Form........</string>
+    <string name="forgot_pass">FORGOT PASSWORD?</string>
+    <string name="forgot_p">Enter the Email address associated with your account</string>
+    <string name="send_forgot">SEND</string>
 
 </resources>

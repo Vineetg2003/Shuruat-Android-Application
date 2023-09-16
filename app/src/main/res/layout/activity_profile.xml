@@ -40,7 +40,7 @@
 
 
             <TextView
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/profilename"
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
@@ -52,17 +52,17 @@
                 android:paddingRight="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:drawablePadding="@dimen/_10sdp"
-                android:text="Your Name"
+                android:text="Name: "
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:textSize="@dimen/_15ssp" />
 
+
             <TextView
-                android:id="@+id/editTextTextPersonName3"
-                android:drawableLeft="@drawable/baseline_date_range_24"
+                android:id="@+id/profilecontact"
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 android:background="@drawable/input_bg2"
                 android:paddingLeft="@dimen/_15sdp"
@@ -70,31 +70,16 @@
                 android:paddingRight="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:drawablePadding="@dimen/_10sdp"
-                android:hint="Date of Birth"
-                android:textSize="@dimen/_15ssp"/>
-            <TextView
-                android:id="@+id/editTextTextPersonName15"
-                android:layout_width="312dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_25sdp"
-                android:background="@drawable/input_bg2"
-                android:paddingLeft="@dimen/_15sdp"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingRight="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:drawablePadding="@dimen/_10sdp"
-                android:hint="Contact Number"
+
                 android:textSize="@dimen/_15ssp"
                 android:drawableLeft="@drawable/baseline_call_24"/>
 
             <TextView
-                android:id="@+id/editTextTextPersonName16"
+                android:id="@+id/profileemail"
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 android:background="@drawable/input_bg2"
                 android:paddingLeft="@dimen/_15sdp"
@@ -102,15 +87,15 @@
                 android:paddingRight="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:drawablePadding="@dimen/_10sdp"
-                android:hint="Email Id"
+
                 android:textSize="@dimen/_15ssp"
                 android:drawableLeft="@drawable/baseline_email_24"/>
             <TextView
-                android:id="@+id/aadhar_number"
+                android:id="@+id/profileadhar"
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 android:background="@drawable/input_bg2"
                 android:paddingLeft="@dimen/_15sdp"
@@ -120,33 +105,34 @@
                 android:drawablePadding="@dimen/_10sdp"
                 android:ems="10"
                 android:textSize="@dimen/_15ssp"
-                android:hint="Aadhar Number" />
+                 />
 
             <TextView
-                android:id="@+id/father_name"
+                android:id="@+id/profileEdu"
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 android:background="@drawable/input_bg2"
                 android:paddingLeft="@dimen/_15sdp"
+                android:drawableLeft="@drawable/baseline_school_24"
                 android:paddingTop="@dimen/_5sdp"
                 android:paddingRight="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:drawablePadding="@dimen/_10sdp"
                 android:ems="10"
-                android:textSize="@dimen/_15ssp"
+                android:textSize="@dimen/_14ssp"
                 android:inputType="textPersonName"
-                android:hint="Father Name" />
+               />
             <TextView
-                android:id="@+id/Enroll"
+                android:id="@+id/profilepass"
                 android:ems="10"
-                android:hint="Enrolment Number"
+
                 android:layout_width="312dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 android:background="@drawable/input_bg2"
                 android:paddingLeft="@dimen/_15sdp"
@@ -155,59 +141,59 @@
                 android:paddingBottom="@dimen/_5sdp"
                 android:textSize="@dimen/_15ssp"
 
+                android:drawableLeft="@drawable/baseline_security_24"
                 android:drawablePadding="@dimen/_10sdp"/>
-            <TextView
-                android:id="@+id/annual"
-                android:layout_width="312dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginEnd="@dimen/_25sdp"
-                android:background="@drawable/input_bg2"
-                android:paddingLeft="@dimen/_15sdp"
-                android:paddingTop="@dimen/_5sdp"
-                android:paddingRight="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:paddingBottom="@dimen/_5sdp"
-                android:drawablePadding="@dimen/_10sdp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textSize="@dimen/_15ssp"
-                android:hint="Annual Household Income"/>
+
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="@dimen/_80sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:text="LOGOUT"
-                android:layout_marginBottom="@dimen/_20sdp"
+android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_200sdp"
 
                 />
 
-            <com.google.android.material.bottomappbar.BottomAppBar
-                android:id="@+id/bottomAppBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:backgroundTint="#6A4063C5"
-                app:fabCradleMargin="10dp"
-                app:fabCradleRoundedCornerRadius="10dp"
-                app:fabCradleVerticalOffset="10dp"
-                tools:ignore="BottomAppBar">
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:id="@+id/bottomNavigationView"
-                    android:layout_marginRight="16dp"
-                    app:menu="@menu/bottom_profile"
-                    android:background="@drawable/transparent_background"
-                    />
-            </com.google.android.material.bottomappbar.BottomAppBar>
 
 
         </LinearLayout>
     </ScrollView>
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="10dp"
+app:backgroundTint="@color/light_blue"
+        app:fabCradleRoundedCornerRadius="50dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/transparent_bg"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/basline_add"
+        app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="40dp"
+        android:id="@+id/fab"
+        app:tint="@color/blue"/>
 
 
 

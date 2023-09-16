@@ -76,13 +76,14 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="339dp"
-            android:layout_height="512dp"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="307dp"
+            android:layout_height="550dp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_28sdp"
             android:gravity="center"
             android:text="@string/content"
-            android:textSize="@dimen/_17ssp"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_18ssp"
             android:textStyle="italic"
 
             app:layout_constraintBottom_toBottomOf="parent"

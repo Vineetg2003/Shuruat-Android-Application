@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.messaging.FirebaseMessaging;
+
 public class MainActivity extends AppCompatActivity {
     private Button button;
 
@@ -16,6 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
+FirebaseMessaging.getInstance().subscribeToTopic("notification");
+
+
+
+
+
 
         button = (Button) findViewById(R.id.button4);
         button.setOnClickListener(new View.OnClickListener() {
